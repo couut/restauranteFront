@@ -4,6 +4,9 @@
   --main-color: #8d36c3;
   --second-color: #000;
 }
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-family: "Ubuntu Sans", sans-serif;
@@ -12,6 +15,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  display: grid;
 }
 
 a {
@@ -91,10 +95,14 @@ h4 {
 }
 
 .restaurant-home-page {
-  height: 90vh;
+  /* height: 90vh; */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  
+
 }
 
 .wrap-restaurant-home-page {
@@ -378,11 +386,10 @@ footer li {
 }
 
 .wrap-footer {
-  display: grid;
-  grid-template-columns: 35% 35% 35%;
-  column-gap: 5%;
-  padding: 1rem;
-  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
 }
 
 .text-element-footer {
@@ -392,7 +399,9 @@ footer li {
 .text-element-footer h3 {
   margin: 1rem 0;
 }
-
+.text-element-footer-mapa{
+  padding: 1%;
+}
 li.footer-menu-item {
   display: flex;
 }
@@ -430,13 +439,15 @@ li.footer-menu-item a:hover {
   opacity: 1;
   color: var(--main-color);
 }
-
+/* a chequear por mi
 .footer-mapa-ubicacion {
-  display: flex;
-  padding: 1rem;
-  margin: 2rem auto;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
 }
+.text-element-footer{
+  justify-content: center;
+} */
 
 .footer-creditos {
   display: flex;
