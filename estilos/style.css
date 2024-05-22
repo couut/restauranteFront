@@ -15,7 +15,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /* display: flex; */
 }
 
 a {
@@ -155,19 +154,8 @@ header.main-header {
   height: 2px;
   margin: 5px 0;
   background: #f2f2f2
-
-
 }
-
-
-
-/* .wrap-rrss-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: left;
-  
-} */
-
+/*iconos*/
 .iconos-header {
   display: flex;
   justify-content: space-between;
@@ -263,13 +251,21 @@ li.menu-item a:hover {
 
 @media all and (max-width: 612px) {
   .restaurant-home-page {
-    padding-top: 70%;
+    padding-top: 40%;
+  }
+  .header-wrap{
+    display: block;
+    width: 100%;
+  }
+  .menu-item :hover{
+    background-color:rgba(225, 107, 236, 0.356);
+    border-radius: 30px;
+  }
+  #main-menu-1{
+    flex-direction: column;
   }
   .wrap-header-fondo {
-    height: 100vh;
-  }
-  #hamburger {
-    display: block;
+    height: 150vh;
   }
 }
 /*Nosotros*/
