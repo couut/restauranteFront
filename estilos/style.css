@@ -261,12 +261,12 @@ li.menu-item a:hover {
   }
 }
 
-@media all and (max-width: 620px) {
+@media all and (max-width: 612px) {
   .restaurant-home-page {
-    padding-top: 40%;
+    padding-top: 70%;
   }
   .wrap-header-fondo {
-    height: 160vh;
+    height: 100vh;
   }
   #hamburger {
     display: block;
