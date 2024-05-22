@@ -91,7 +91,7 @@ h4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 130vh;
 }
 
 .restaurant-home-page {
@@ -99,16 +99,15 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 15%;
+  padding-top: 20%;
   padding-bottom: 15%;
-  
 
 }
 
 .wrap-restaurant-home-page {
   color: #fff;
   text-align: center;
-  width: 50%;
+  width: 50%;;
 }
 
 .wrap-restaurant-home-page p {
@@ -133,31 +132,55 @@ header.main-header {
 
 .header-wrap {
   display: flex;
-  flex-flow: row-reverse wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   padding: 1rem;
   background-color: transparent;
   align-items: flex-start;
 }
+#hamburger {
+  display: none;
+  height: fit-content;
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 5px;
+  transition: 0.2s;
+  margin-top: 1%;
+}
+#hamburger:hover {
+  background-color: #f2e2ec;
+}
+#hamburger div{
+  width: 30px;
+  height: 2px;
+  margin: 5px 0;
+  background: #f2f2f2
 
-.wrap-rrss-header {
+
+}
+
+
+
+/* .wrap-rrss-header {
   display: flex;
   justify-content: space-between;
   align-items: left;
-  color: whitesmoke;
-  padding: 1rem;
-}
+  
+} */
 
 .iconos-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: whitesmoke;
+  padding: 1rem;
 }
 
 .iconos-header i {
-  margin-right: 15px;
-  font-size: 25px;
+  margin-right: 1vw;
+  font-size: 1.75rem;
   opacity: 0.6;
+  display: block;
 }
 
 .iconos-header i:hover {
@@ -165,7 +188,9 @@ header.main-header {
   opacity: 1;
   color: var(--main-color);
 }
-
+i{
+  display: block;
+}
 /*Menu header*/
 
 .nav-header {
@@ -212,7 +237,41 @@ li.menu-item a {
 li.menu-item a:hover {
   color: var(--main-color);
 }
+@media (max-width: 860px) {
+  .header-wrap {
+    flex-flow: row-reverse wrap;
+  }
+  .iconos-header {
+    flex-flow: column wrap;
+  }
+  .restaurant-home-page {
+    padding-top: 25%;
+  }
+  
+}
+@media all and (max-width: 720px) {
+  #iconos-header-1{
+    display: none;
+  }
+  .restaurant-home-page {
+    padding-top: 35%;
+  }
+  .wrap-header-fondo {
+    height: 150vh;
+  }
+}
 
+@media all and (max-width: 620px) {
+  .restaurant-home-page {
+    padding-top: 40%;
+  }
+  .wrap-header-fondo {
+    height: 160vh;
+  }
+  #hamburger {
+    display: block;
+  }
+}
 /*Nosotros*/
 
 .wrap-header-fondo-nosotros {
