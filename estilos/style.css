@@ -428,13 +428,18 @@ li.menu-item a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media all and (max-width: 612px) {
+@media all and (max-width: 900px) {
   .wrap-header-fondo-carta{
     height: 200vh;
   }
+  @media all and (max-width: 700px) {
+    .wrap-header-fondo-carta{
+      height: 280vh;
+    }
+  }
   @media all and (max-width: 400px) {
     .wrap-header-fondo-carta{
-      height: 350vh;
+      height: 330vh;
     }
   }
 }
