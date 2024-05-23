@@ -357,7 +357,7 @@ li.menu-item a:hover {
 
 .wrap-header-fondo-carta {
   background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
-    url("/img/galeria3.jpg");
+    url("../img/galeria3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -428,7 +428,16 @@ li.menu-item a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+@media all and (max-width: 612px) {
+  .wrap-header-fondo-carta{
+    height: 200vh;
+  }
+  @media all and (max-width: 400px) {
+    .wrap-header-fondo-carta{
+      height: 350vh;
+    }
+  }
+}
 /*Footer*/
 
 footer {
