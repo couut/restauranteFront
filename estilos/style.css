@@ -112,12 +112,11 @@ h4 {
 .wrap-restaurant-home-page {
     color: #fff;
     text-align: center;
-    width: 50%;
-    ;
+    width: 80%;
 }
 
 .wrap-restaurant-home-page p {
-    margin: 2rem auto;
+    padding: 2rem auto;
 }
 
 .reserva-btn {
@@ -126,6 +125,7 @@ h4 {
     color: #fff;
     font-size: bold;
     border-radius: 10px;
+    margin: 5rem auto;
 }
 
 /*Header*/
