@@ -4,6 +4,9 @@
   --main-color: #8d36c3;
   --second-color: #000;
 }
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-family: "Ubuntu Sans", sans-serif;
@@ -54,7 +57,7 @@ h4 {
 
 /*Media Queries - A CHEQUEAR*/
 /* PC de escritorio */
-@media (min-width: 1024px) {
+@media (min-width: 940px) {
   .body {
     width: 100%;
     padding: 1rem;
@@ -62,7 +65,7 @@ h4 {
 }
 
 /* Tabletas */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 780px) and (max-width: 940px) {
   .body {
     width: 100%;
     padding: 1rem;
@@ -70,7 +73,7 @@ h4 {
 }
 
 /* Celular */
-@media (min-width: 320px) and (max-width: 767px) {
+@media all and (max-width: 780px) {
   .body {
     width: 100%;
     padding: 1rem;
@@ -83,24 +86,27 @@ h4 {
 
 .wrap-header-fondo {
   background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
-    url("/img/background.jpg");
+    url("../img/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 130vh;
 }
 
 .restaurant-home-page {
-  height: 90vh;
+  /* height: 90vh; */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 20%;
+  padding-bottom: 15%;
+
 }
 
 .wrap-restaurant-home-page {
   color: #fff;
   text-align: center;
-  width: 50%;
+  width: 50%;;
 }
 
 .wrap-restaurant-home-page p {
@@ -118,35 +124,51 @@ h4 {
 /*Header*/
 
 header.main-header {
-  position: relative;
+  /* position: relative; */
   top: 0;
   width: 100%;
 }
 
 .header-wrap {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   padding: 1rem;
   background-color: transparent;
+  align-items: flex-start;
 }
-
-.wrap-rrss-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: left;
-  color: whitesmoke;
+#hamburger {
+  display: none;
+  height: fit-content;
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 5px;
+  transition: 0.2s;
+  margin-top: 1%;
 }
-
+#hamburger:hover {
+  background-color: #f2e2ec;
+}
+#hamburger div{
+  width: 30px;
+  height: 2px;
+  margin: 5px 0;
+  background: #f2f2f2
+}
+/*iconos*/
 .iconos-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: whitesmoke;
+  padding: 1rem;
 }
 
 .iconos-header i {
-  margin-right: 15px;
-  font-size: 25px;
+  margin-right: 1vw;
+  font-size: 1.75rem;
   opacity: 0.6;
+  display: block;
 }
 
 .iconos-header i:hover {
@@ -154,7 +176,9 @@ header.main-header {
   opacity: 1;
   color: var(--main-color);
 }
-
+i{
+  display: block;
+}
 /*Menu header*/
 
 .nav-header {
@@ -176,6 +200,7 @@ ul.main-menu {
   justify-content: space-between;
   font-size: 1.1rem;
   align-items: center;
+  flex-flow: row wrap;
 }
 
 ul.main-menu #nav-btn-contact {
@@ -200,7 +225,49 @@ li.menu-item a {
 li.menu-item a:hover {
   color: var(--main-color);
 }
+@media (max-width: 860px) {
+  .header-wrap {
+    flex-flow: row-reverse wrap;
+  }
+  .iconos-header {
+    flex-flow: column wrap;
+  }
+  .restaurant-home-page {
+    padding-top: 25%;
+  }
+  
+}
+@media all and (max-width: 720px) {
+  #iconos-header-1{
+    display: none;
+  }
+  .restaurant-home-page {
+    padding-top: 35%;
+  }
+  .wrap-header-fondo {
+    height: 150vh;
+  }
+}
 
+@media all and (max-width: 612px) {
+  .restaurant-home-page {
+    padding-top: 40%;
+  }
+  .header-wrap{
+    display: block;
+    width: 100%;
+  }
+  .menu-item :hover{
+    background-color:rgba(225, 107, 236, 0.356);
+    border-radius: 30px;
+  }
+  #main-menu-1{
+    flex-direction: column;
+  }
+  .wrap-header-fondo {
+    height: 150vh;
+  }
+}
 /*Nosotros*/
 
 .wrap-header-fondo-nosotros {
@@ -290,7 +357,7 @@ li.menu-item a:hover {
 
 .wrap-header-fondo-carta {
   background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
-    url("/img/galeria3.jpg");
+    url("../img/galeria3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -361,7 +428,27 @@ li.menu-item a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media all and (max-width: 900px) {
+  .wrap-header-fondo-carta{
+    height: 200vh;
+  }
+  @media all and (max-width: 700px) {
+    .wrap-header-fondo-carta{
+      height: 280vh;
+    }
+  }
+@media all and (min-height: 1000px) and (max-width: 700px){
+    .wrap-header-fondo-carta{
+      height: 150vh;
+    }
+  }
 
+  @media all and (max-width: 400px) {
+    .wrap-header-fondo-carta{
+      height: 330vh;
+    }
+  }
+}
 /*Footer*/
 
 footer {
@@ -378,11 +465,10 @@ footer li {
 }
 
 .wrap-footer {
-  display: grid;
-  grid-template-columns: 35% 35% 35%;
-  column-gap: 5%;
-  padding: 1rem;
-  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
 }
 
 .text-element-footer {
@@ -392,7 +478,10 @@ footer li {
 .text-element-footer h3 {
   margin: 1rem 0;
 }
-
+.text-element-footer-mapa{
+  padding: 1%;
+  width: 100%;
+}
 li.footer-menu-item {
   display: flex;
 }
@@ -430,13 +519,15 @@ li.footer-menu-item a:hover {
   opacity: 1;
   color: var(--main-color);
 }
-
+/* a chequear por mi
 .footer-mapa-ubicacion {
-  display: flex;
-  padding: 1rem;
-  margin: 2rem auto;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
 }
+.text-element-footer{
+  justify-content: center;
+} */
 
 .footer-creditos {
   display: flex;

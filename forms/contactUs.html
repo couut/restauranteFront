@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactenos</title>
-    <link rel="icon" type="image/png" href="/img/favicon.ico">
-    <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="icon" type="image/png" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../estilos/style.css">
     <script src="https://kit.fontawesome.com/716f5089a4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap">
@@ -19,32 +19,41 @@
     <div class="wrap-header-fondo-reservas">
         <header class="main-header">
             <div class="header-wrap">
-                <!--Redes-->
-                <div class="wrap-rrss-header">
-                    <div class="iconos-header">
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-square-facebook"></i>
-                        <i class="fa-brands fa-square-twitter"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                </div>
+
+                <input type="checkbox" id="nav_check" hidden>
 
                 <!--Navbar-->
                 <div class="wrap-nav-header">
+
                     <nav class="nav-header">
                         <!--Nav Menu-->
-                        <ul class="main-menu">
-                            <li class="menu-item"><a href="/index.html">Inicio</a></li>
-                            <li class="menu-item"><a href="/varios/aboutUs.html">Nosotros</a></li>
-                            <li class="menu-item"><a href="/varios/carta.html">Carta</a></li>
-                            <li class="menu-item"><a href="/forms/contactus.html">Reservas</a></li>
-                            <li class="menu-item"><a id="nav-btn-contact" href="/forms/contactus.html">Contacto</a>
-                            </li>
+
+                        <ul class="main-menu" id="main-menu-1">
+                            <li class="menu-item"><a href="../index.html">Inicio</a></li>
+                            <li class="menu-item"><a href="../varios/aboutUs.html">Nosotros</a></li>
+                            <li class="menu-item"><a href="../varios/carta.html">Carta</a></li>
+                            <li class="menu-item"><a href="../forms/contactUs.html">Reservas</a></li>
+                            <li class="menu-item"><a id="nav-btn-contact" href="../forms/contactUs.html">Contacto</a></li>
                         </ul>
                     </nav>
+
                 </div>
+                <!--Redes-->
+                <!-- <label for="nav_check" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </label> -->
+                <div class="iconos-header" id="iconos-header-1">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
             </div>
+
         </header>
 
         <h1 style="color:#FFF; text-align: center;margin-top: 5rem">Consultas y Reservas</h1>
@@ -56,12 +65,9 @@
                     <h2 style="color:#FFF; text-align: center;margin-top: 1rem; margin-left: 25%;">Formulario de
                         Contacto
                     </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, quasi temporibus officia
-                        eaque mollitia atque provident incidunt autem illo vel voluptatibus doloremque in delectus quas
-                        veniam quam at expedita unde!
-                        Dolorum nostrum dicta reprehenderit, magnam quaerat enim molestias mollitia rerum, illum
-                        deleniti eveniet harum suscipit quam possimus fuga facilis? Autem ad facilis dicta corrupti
-                        molestiae eos tenetur. Ratione, eum quae!</p>
+                    <p>En Restaurante Front, nos enorgullecemos de ofrecer una experiencia gastronómica inolvidable, combinando exquisita cocina, un ambiente acogedor y un servicio excepcional. Nuestro objetivo es que cada visita sea especial y que disfrutes de momentos únicos con tus seres queridos.
+Sabemos lo importante que es para ti disfrutar de una velada sin preocupaciones. Por eso, te ofrecemos un sistema de reservas fácil y rápido.
+Esperamos darte la bienvenida muy pronto y que disfrutes de una experiencia única. ¡Hacé tu reserva ahora y vive momentos inolvidables con nosotros!</p>
 
                     <!--Formulario-->
                     <form action="" class="formulario" id="formulario">
@@ -199,9 +205,9 @@
         <div class="footer-mapa-ubicacion">
             <div class="text-element-footer">
                 <h3 class="main-footer">Mapa</h3>
-                <iframe
+                <iframe class="text-element-footer-mapa"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d52554.32582932589!2d-58.4140005!3d-34.5878389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1715549701840!5m2!1ses-419!2sar"
-                    width="1200" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+                    height="300" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
