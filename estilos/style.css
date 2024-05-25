@@ -1,0 +1,806 @@
+/*General*/
+
+:root {
+    --main-color: #8d36c3;
+    --second-color: #000;
+    --third-color:rgba(76, 76, 79, 0.757)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+/*Media Queries - A CHEQUEAR*/
+/* PC de escritorio */
+@media (min-width: 940px) {
+    .body {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Tabletas */
+@media (min-width: 780px) and (max-width: 940px) {
+    .body {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Celular */
+@media all and (max-width: 780px) {
+    .body {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/*///////////////////////////////////////////*/
+
+/* Inicio - Fondo */
+
+.wrap-header-fondo {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+        url("../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 130vh;
+}
+
+.restaurant-home-page {
+    /* height: 90vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20%;
+    padding-bottom: 15%;
+
+}
+
+.wrap-restaurant-home-page {
+    color: #fff;
+    text-align: center;
+    width: 50%;
+    ;
+}
+
+.wrap-restaurant-home-page p {
+    margin-bottom: 2rem;
+}
+
+.reserva-btn {
+    background-color: var(--main-color);
+    padding: 1rem 1rem;
+    color: #fff;
+    font-size: bold;
+    border-radius: 10px;
+}
+
+/*Header*/
+
+header.main-header {
+    /* position: relative; */
+    top: 0;
+    width: 100%;
+}
+
+.header-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: transparent;
+    align-items: flex-start;
+}
+
+#hamburger {
+    display: none;
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+    margin-top: 1%;
+}
+
+#hamburger:hover {
+    background-color: #f2e2ec;
+}
+
+#hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 5px 0;
+    background: #f2f2f2
+}
+
+/*iconos*/
+.iconos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    padding: 1rem;
+}
+
+.iconos-header i {
+    margin-right: 1vw;
+    font-size: 1.75rem;
+    opacity: 0.6;
+    display: block;
+}
+
+.iconos-header i:hover {
+    cursor: pointer;
+    opacity: 1;
+    color: var(--main-color);
+}
+
+i {
+    display: block;
+}
+
+/*Menu header*/
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-wrap-header {
+    display: flex;
+    flex-basis: 50%;
+}
+
+ul.main-menu {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+ul.main-menu #nav-btn-contact {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--main-color);
+    border-radius: 4px;
+    color: #fff;
+}
+
+li.menu-item {
+    display: flex;
+    margin: 0.75rem;
+}
+
+li.menu-item a {
+    padding: 0.5rem 1rem;
+    color: whitesmoke;
+}
+
+li.menu-item a:hover {
+    color: var(--main-color);
+}
+
+@media (max-width: 860px) {
+    .header-wrap {
+        flex-flow: row-reverse wrap;
+    }
+
+    .iconos-header {
+        flex-flow: column wrap;
+    }
+
+    .restaurant-home-page {
+        padding-top: 25%;
+    }
+
+}
+
+@media all and (max-width: 720px) {
+    #iconos-header-1 {
+        display: none;
+    }
+
+    .restaurant-home-page {
+        padding-top: 35%;
+    }
+
+    .wrap-header-fondo {
+        height: 150vh;
+    }
+}
+
+@media all and (max-width: 612px) {
+    .restaurant-home-page {
+        padding-top: 40%;
+    }
+
+    .header-wrap {
+        display: block;
+        width: 100%;
+    }
+
+    .menu-item :hover {
+        background-color: rgba(225, 107, 236, 0.356);
+        border-radius: 30px;
+    }
+
+    #main-menu-1 {
+        flex-direction: column;
+    }
+
+    .wrap-header-fondo {
+        height: 150vh;
+    }
+}
+
+/*Nosotros*/
+
+.wrap-header-fondo-nosotros {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+        url("../img/reserva.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150vh;
+}
+
+.restaurant-nosotros-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap-restaurant-nosotros-page {
+    color: #fff;
+    text-align: center;
+}
+
+/*Nosotros*/
+
+
+
+/*Main Pagina nosotros*/
+
+img{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+section{
+    max-width: 75rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-nosotros h1{
+    text-align: center;
+    margin:2em auto;
+    color: #fff;
+    
+}
+
+.grid-nosotros{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 2em;
+    margin: 0 1em;
+}
+
+.tarjeta-nosotros{
+    grid-column-end: span 3;
+    background-color:var(--third-color);
+    border-radius: 2em;
+    padding: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    color: #fff;
+   
+} 
+
+
+.tarjeta-nosotros .texto-tarjeta-nosotros{
+    margin: 2em 0em;
+
+}
+
+
+.tarjeta-nosotros img{
+    border-radius: 2em;
+    max-width: 15 rem;
+    width: 100%;
+    
+}
+
+.img-tarjeta-nosotros{
+    max-width: 15rem;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    margin: 2em auto;
+    
+}
+
+/* Tabletas */
+@media (min-width: 610px) and (max-width: 1023px) {
+    
+    .grid-nosotros>*{
+        grid-template-columns: repeat(12,1fr);
+        grid-column-end: span 6;
+        margin: 0 auto;
+        gap: 1em;
+    }
+
+    .section-nosotros h1{
+        margin: 1em auto;
+    }
+
+    .wrap-header-fondo-nosotros{
+        height: 240vh;
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 609px){
+   
+    .grid-nosotros>*{
+        grid-template-columns: repeat(12,1fr);
+        grid-column-end: span 12;
+        margin: 0 auto;
+        gap: 1em;
+    }
+
+    .section-nosotros h1{
+        margin: 2em auto;
+    }
+
+    .wrap-header-fondo-nosotros {
+        background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+            url("../img/fondo-restaurante.jpg");
+    }
+
+    .wrap-header-fondo-nosotros{
+        height: 420vh;
+        object-fit: cover;
+        
+    }
+  
+}
+
+
+
+/* 
+@media (max-width: 500px) and (max-height:830px){
+   
+    .grid-nosotros>*{
+        grid-template-columns: repeat(12,1fr);
+        grid-column-end: span 12;
+        margin: 0 auto;
+        gap: 1em;
+    }
+
+    .section-nosotros h1{
+        margin: 2em auto;
+    }
+
+    .wrap-header-fondo-nosotros {
+        background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+            url("../img/fondo-restaurante.jpg");
+    }
+
+    .wrap-header-fondo-nosotros{
+        height: 450vh;
+        object-fit: cover;
+        
+    }
+  
+}
+
+ 
+@media (max-width: 500px) and (min-height: 830px){
+   
+    .grid-nosotros>*{
+        grid-template-columns: repeat(12,1fr);
+        grid-column-end: span 12;
+        margin: 0 auto;
+        gap: 1em;
+    }
+
+    .section-nosotros h1{
+        margin: 2em auto;
+    }
+
+    .wrap-header-fondo-nosotros {
+        background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+            url("../img/fondo-restaurante.jpg");
+    }
+
+    .wrap-header-fondo-nosotros{
+        height: 350vh;
+        object-fit: cover;
+        
+    }
+  
+}
+*/
+
+
+/* Carta*/
+
+
+.wrap-header-fondo-carta {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+        url("../img/galeria3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150vh;
+}
+
+.restaurant-carta-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap-restaurant-carta-page {
+    color: #fff;
+    text-align: center;
+}
+
+.column-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-top: 2rem;
+}
+
+.carta-restaurant {
+    border-radius: 5px;
+    padding: 1rem 0.5rem;
+    display: flex;
+    align-items: end;
+}
+
+.wrap-carta-texto {
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background: linear-gradient(to top, rgb(0 0 0/0.5), rgb(0 0 0/0.5));
+}
+
+.wrap-carta-texto p {
+    color: #f2f2f2;
+}
+
+.precio-menu {
+    font-weight: bold;
+}
+
+.precio-menu span {
+    font-size: 2rem;
+}
+
+/*Media Queries - A CHEQUEAR*/
+/* PC de escritorio
+  @media (min-width: 1024px) {
+    .column-6 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .column-6 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .column-6 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media all and (max-width: 900px) {
+    .wrap-header-fondo-carta {
+        height: 200vh;
+    }
+
+    @media all and (max-width: 700px) {
+        .wrap-header-fondo-carta {
+            height: 280vh;
+        }
+    }
+
+    @media all and (max-width: 400px) {
+        .wrap-header-fondo-carta {
+            height: 330vh;
+        }
+    }
+}
+
+
+/*Footer*/
+
+footer {
+    background: #f2e2ec;
+    color: #222;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer li {
+    list-style: none;
+}
+
+.wrap-footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+
+.text-element-footer {
+    line-height: 2;
+}
+
+.text-element-footer h3 {
+    margin: 1rem 0;
+}
+
+.text-element-footer-mapa {
+    padding: 1%;
+}
+
+li.footer-menu-item {
+    display: flex;
+}
+
+li.footer-menu-item a {
+    font-size: 16px;
+    color: #576171;
+}
+
+li.footer-menu-item a:hover {
+    color: var(--main-color);
+}
+
+.iconos-contacto-footer li span {
+    margin-right: 15px;
+    font-size: 15px;
+    color: #576171;
+}
+
+.iconos-contacto-footer i {
+    margin-right: 15px;
+    font-size: 25px;
+    color: #576171;
+}
+
+.iconos-redes-footer i {
+    margin-right: 15px;
+    font-size: 35px;
+    color: #576171;
+    opacity: 0.6;
+}
+
+.iconos-redes-footer i:hover {
+    cursor: pointer;
+    opacity: 1;
+    color: var(--main-color);
+}
+
+/* a chequear por mi
+  .footer-mapa-ubicacion {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+  .text-element-footer{
+    justify-content: center;
+  } */
+
+.footer-creditos {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    color: #576171;
+    font-size: 0.9rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.politicas-creds ul {
+    display: flex;
+    flex-flow: row;
+}
+
+.politicas-creds ul li {
+    padding-right: 1rem;
+}
+
+.politicas-creds ul li a {
+    color: #576171;
+    font-size: 0.9rem;
+}
+
+/*Media Queries - A CHEQUEAR*/
+@media (max-width: 768px) {
+    .wrap-footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .footer-creditos {
+        flex-flow: column;
+    }
+}
+
+/*FORMULARIOS*/
+
+/*Formulario de contacto*/
+
+.wrap-header-fondo-reservas {
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+        url("../img/reserva2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150vh;
+    width: 100%;
+}
+
+.restaurant-reservas-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 0 auto; /* !!!!! */
+}
+
+.wrap-restaurant-reservas-page {
+    color: #fff;
+    text-align: center;
+}
+
+.wrap-restaurant-reservas-page p {
+   /* margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 25%;*/
+    margin: 0 auto;   /* !!!!! */
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 15fr 15fr;
+    text-align: left;
+    width: 100%;
+  /*  margin-top: 5%;
+    margin-left: 15%;
+    align-items: center;*/
+    margin: 0 auto;  /* !!!! */
+}
+
+.formulario label {
+    font-size: 1.3rem;
+    text-align: left;
+    display: block;
+    margin-top: 1%;
+}
+
+.formulario input,
+.formulario textarea {
+    position: relative;
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 4px 4px 4px 4px;
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+#menu,
+#horario {
+    padding: 0.5rem 2rem;
+    text-align: left;
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 4px 4px 4px 4px;
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+#enviar {
+    cursor: pointer;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    background-color: #8d36c3;
+    font-size: 1.6rem;
+    padding: 10px;
+    color: #fff;
+    font-family: "Ubuntu Sans", sans-serif;
+    align-items: center;
+    margin: 4px 4px 4px 4px;
+    margin-left: 33%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .form_enviar {
+        width: 100%;
+    }
+    .wrap-header-fondo-reservas{
+        height: 200vh;
+    }
+    
+
+    .iconos-header{
+        flex-flow: column nowrap;
+    }
+}
+
