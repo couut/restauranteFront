@@ -902,7 +902,7 @@ li.footer-menu-item a:hover {
 
 .wrap-header-fondo-registro {
 	background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
-		url("/img/galeria7.jpg");
+		url("../img/galeria7.jpg");
 	background-size: cover;
 	color: #fff;
 	background-repeat: no-repeat;
@@ -1041,11 +1041,36 @@ li.footer-menu-item a:hover {
         width: 100%;
     }
 
-    .wrap-header-fondo-reservas {
+    /* .wrap-header-fondo-reservas {
         height: 200vh;
-    }
+    } */
 
     .iconos-header {
         flex-flow: column nowrap;
+    }
+}
+@media all and (min-width: 250px) and (max-width: 865px)  and (max-height: 750px) {
+    .wrap-header-fondo-registro {
+        height: 200vh;
+    }
+}
+@media all and (min-width: 866px) and (max-width: 1200px)  and (max-height: 1000px) {
+    .wrap-header-fondo-registro {
+        height: 220vh;
+    }
+}
+@media all and (min-width: 1201px) and (max-width: 1500px) and (max-height: 630px)  {
+    .wrap-header-fondo-registro {
+        height: 250vh;
+    }
+}
+@media all and (min-width: 1000px) and (max-height: 1500px){
+    .wrap-header-fondo-registro {
+        height: 125vh;
+    }
+}
+@media all and (min-width: 868px) and (max-width: 1000px) and (min-height: 655px) and (max-height: 999px){
+    .wrap-header-fondo-registro {
+        height: 120vh;
     }
 }
