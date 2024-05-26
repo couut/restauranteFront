@@ -1019,6 +1019,7 @@ li.footer-menu-item a:hover {
 	border: none;
 	border-radius: 3px;
 	cursor: pointer;
+	font-family: "Ubuntu Sans", sans-serif;
 }
 
 .formulario_mensaje-exito {
