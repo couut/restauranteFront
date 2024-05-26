@@ -358,7 +358,7 @@ li.menu-item a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 150vh;
+    height: 170vh;
 }
 
 .restaurant-nosotros-page {
@@ -458,6 +458,7 @@ section {
     }
 }
 
+
 /* Celulares*/
 
 @media (min-width: 320px) and (max-width: 609px) {
@@ -485,7 +486,21 @@ section {
     }
 
 }
-
+@media all and(max-width: 608px) and(max-height: 500px){
+    .wrap-header-fondo-nosotros {
+        height: 600vh;
+    }
+}
+@media all and (max-width: 445px) and (min-height: 813px){
+    .wrap-header-fondo-nosotros {
+        height: 445vh;
+    }
+}
+@media all and (max-width: 430px) and (max-height: 812px){
+    .wrap-header-fondo-nosotros {
+        height: 500vh;
+    }
+}
 
 
 /* 
@@ -1049,6 +1064,7 @@ li.footer-menu-item a:hover {
         flex-flow: column nowrap;
     }
 }
+/*correciones especificas para dispositivos con alturaS especificas*/
 @media all and (min-width: 250px) and (max-width: 865px)  and (max-height: 750px) {
     .wrap-header-fondo-registro {
         height: 200vh;
@@ -1059,6 +1075,7 @@ li.footer-menu-item a:hover {
         height: 220vh;
     }
 }
+/*dispositivos con poca altura y muy largos*/
 @media all and (min-width: 1201px) and (max-width: 1500px) and (max-height: 630px)  {
     .wrap-header-fondo-registro {
         height: 250vh;
