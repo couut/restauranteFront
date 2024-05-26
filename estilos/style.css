@@ -440,7 +440,7 @@ section {
 }
 
 /* Tabletas */
-@media (min-width: 610px) and (max-width: 1043px) {
+@media (min-width: 643px) and (max-width: 1043px) {
 
     .grid-nosotros>* {
         grid-template-columns: repeat(12, 1fr);
@@ -461,7 +461,7 @@ section {
 
 /* Celulares*/
 
-@media (min-width: 320px) and (max-width: 609px) {
+@media (min-width: 320px) and (max-width: 642px) {
 
     .grid-nosotros>* {
         grid-template-columns: repeat(12, 1fr);
@@ -486,21 +486,83 @@ section {
     }
 
 }
-@media all and(max-width: 608px) and(max-height: 500px){
+/*con un height a partir de 700*/
+/*tabletas*/
+@media (min-width: 643px) and (max-width: 1043px) and (max-height: 822px){
+
+    .grid-nosotros>* {
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-end: span 6;
+        margin: 0 auto;
+        gap: 1em;
+    }
+
+    .section-nosotros h1 {
+        margin: 1em auto;
+    }
+
     .wrap-header-fondo-nosotros {
-        height: 600vh;
+        height: 270vh;
     }
 }
-@media all and (max-width: 445px) and (min-height: 813px){
-    .wrap-header-fondo-nosotros {
-        height: 445vh;
+
+
+/* Celulares*/
+
+@media (min-width: 320px) and (max-width: 612px) and (max-height: 870px){
+
+    .grid-nosotros>* {
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-end: span 12;
+        margin: 0 auto;
+        gap: 1em;
     }
-}
-@media all and (max-width: 430px) and (max-height: 812px){
+
+    .section-nosotros h1 {
+        margin: 2em auto;
+    }
+
+    .wrap-header-fondo-nosotros {
+        background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+            url("../img/fondo-restaurante.jpg");
+    }
+
     .wrap-header-fondo-nosotros {
         height: 500vh;
+        object-fit: cover;
+
     }
+
 }
+@media (min-width: 320px) and (max-width: 612px) and (max-height: 732px){
+
+    .grid-nosotros>* {
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-end: span 12;
+        margin: 0 auto;
+        gap: 1em;
+    }
+
+    .section-nosotros h1 {
+        margin: 2em auto;
+    }
+
+    .wrap-header-fondo-nosotros {
+        background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+            url("../img/fondo-restaurante.jpg");
+    }
+
+    .wrap-header-fondo-nosotros {
+        height: 600vh;
+        object-fit: cover;
+
+    }
+
+}
+       
+
+
+
 
 
 /* 
