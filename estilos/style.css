@@ -897,3 +897,154 @@ li.footer-menu-item a:hover {
         flex-flow: column nowrap;
     }
 }
+
+/*___________Formulario de registro general___________*/
+
+.wrap-header-fondo-registro {
+	background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.15)),
+		url("/img/galeria7.jpg");
+	background-size: cover;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+}
+
+.restaurant-formulario-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1000px;
+	padding: 1rem;
+}
+
+.formulario_ {
+	display: block;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/*___________Etiquetas Usuario, nombre, etc___________*/
+.formulario_label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+/*___________Cajas input___________*/
+.formulario_grupo-input {
+	position: relative;
+}
+
+.formulario_input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 35px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+}
+
+.formulario_input:focus {
+	border: 2px solid #8d36c3;
+	outline: none;
+}
+
+.formulario_grupo-correcto .formulario_input {
+	border: 3px solid green;
+}
+
+.formulario_grupo-incorrecto .formulario_input {
+	border: 3px solid red;
+}
+
+/*___________Mensaje de error___________*/
+.formulario_input-error {
+	font-size: 14px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario_input-error-activo {
+	display: block;
+	color: #fff;
+}
+
+/*___________Checkbox___________*/
+.formulario_checkbox {
+	margin-right: 10px;
+}
+
+/*___________Acomodar Terminos, alert, boton enviar___________*/
+.formulario_grupo-terminos,
+.formulario_mensaje,
+.formulario_grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+/*___________Mensaje de error de formulario___________*/
+.formulario_mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #da3d3d;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario_mensaje p {
+	margin: 0;
+}
+
+.formulario_mensaje-activo {
+	display: block;
+}
+
+/*___________Boton Enviar___________*/
+.formulario_grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario_btn {
+	height: 45px;
+	line-height: 45px;
+	width: 40%;
+	background: #8d36c3;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.formulario_mensaje-exito {
+	font-size: 18px;
+	color: #fff;
+	display: none;
+}
+
+.formulario_mensaje-exito-activo {
+	display: block;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .form_enviar {
+        width: 100%;
+    }
+
+    .wrap-header-fondo-reservas {
+        height: 200vh;
+    }
+
+    .iconos-header {
+        flex-flow: column nowrap;
+    }
+}
