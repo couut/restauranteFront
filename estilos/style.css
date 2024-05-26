@@ -957,7 +957,7 @@ li.footer-menu-item a:hover {
     margin-left: 33%;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 422px) and (max-width: 767px) {
     .formulario {
         grid-template-columns: 1fr;
     }
@@ -974,6 +974,128 @@ li.footer-menu-item a:hover {
         flex-flow: column nowrap;
     }
 }
+@media  (max-width: 421px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .form_enviar {
+        width: 100%;
+    }
+
+    .wrap-header-fondo-reservas {
+        height: 240vh;
+    }
+
+    .iconos-header {
+        flex-flow: column nowrap;
+    }
+}
+
+@media (min-width: 422px) and (max-width: 767px) and (max-height: 800px){
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .form_enviar {
+        width: 100%;
+    }
+
+    .wrap-header-fondo-reservas {
+        height: 230vh;
+    }
+
+    .iconos-header {
+        flex-flow: column nowrap;
+    }
+}
+@media (min-width: 422px) and (max-width: 767px) and (max-height: 670px){
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .form_enviar {
+        width: 100%;
+    }
+
+    .wrap-header-fondo-reservas {
+        height: 250vh;
+    }
+
+    .iconos-header {
+        flex-flow: column nowrap;
+    }
+}
+@media (min-width: 422px) and (max-width: 767px) and (max-height: 608px){
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .form_enviar {
+        width: 100%;
+    }
+
+    .wrap-header-fondo-reservas {
+        height: 280vh;
+    }
+
+    .iconos-header {
+        flex-flow: column nowrap;
+    }
+}
+@media  (max-width: 421px) and (max-height: 757px){
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .form_enviar {
+        width: 100%;
+    }
+
+    .wrap-header-fondo-reservas {
+        height: 290vh;
+    }
+
+    .iconos-header {
+        flex-flow: column nowrap;
+    }
+}
+@media  (max-width: 421px) and (max-height: 626px){
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .form_enviar {
+        width: 100%;
+    }
+
+    .wrap-header-fondo-reservas {
+        height: 340vh;
+    }
+
+    .iconos-header {
+        flex-flow: column nowrap;
+    }
+}
+@media  (max-width: 421px) and (max-height: 536px){
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .form_enviar {
+        width: 100%;
+    }
+
+    .wrap-header-fondo-reservas {
+        height: 400vh;
+    }
+
+    .iconos-header {
+        flex-flow: column nowrap;
+    }
+}
+
+
 
 /*___________Formulario de registro general___________*/
 
