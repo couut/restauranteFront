@@ -11,7 +11,7 @@ def crear_reserva():
 
 def get_all_reserva():
     reservas = Reserva.get_all()
-    return jsonify([reserva.serialize() for reserva in reservas])
+    return jsonify([reserva.serialize() for reserva in reservas]) 
 
 def get_reserva_by_id(id_reserva):
     reserva = Reserva.get_by_id(id_reserva)

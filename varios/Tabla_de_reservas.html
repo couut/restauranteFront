@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Reservas</title>
-    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/style.css">   
+    <script src="../forms/CRUD-reservas.js"></script>
 </head>
 <body>
     <form id="form-reserva">
@@ -28,6 +30,7 @@
         <label for="horario">Horario de Reserva:</label>
         <input type="time" id="horario" name="horario" required>
         
+        <input type="hidden" id="id-reserva" name="id-reserva">
         <button type="button" id="btn-save-reserva">Guardar Reserva</button>
     </form>
     
@@ -52,6 +55,7 @@
 
     <a href="index.html">Agregar Reserva</a>
 
-    <script src="static/js/scripts.js"></script>
+ 
 </body>
+
 </html>

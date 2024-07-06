@@ -1,8 +1,7 @@
 from app.database import get_db
-from flask import request, jsonify
 
 class Reserva:
-    def __init__(self, id_reserva, nombre,telefono ,email , comensales, menu ,fecha ,horario):
+    def __init__(self, id_reserva=None, nombre=None,telefono=None ,email=None , comensales=None, menu=None ,fecha=None,horario=None):
         self.id_reserva = id_reserva
         self.nombre = nombre
         self.telefono = telefono
@@ -50,7 +49,7 @@ class Reserva:
     def delete(self):
         db = get_db()
         cursor = db.cursor()
-        cursor.execute('DELETE FROM reservas WHERE id_reserva = %s', (self.id_reserva,))
+        cursor.execute('DELETE FROM reservas WHERE id_reserva = %s', (self.id_reserva))
         db.commit()
         cursor.close()
 
