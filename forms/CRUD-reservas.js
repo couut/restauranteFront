@@ -69,4 +69,94 @@ async function saveReserva() {
     if (idReserva !== "") {
         result = await fetchData(`${BASEURL}/api/reserva/${idReserva}`, 'PUT', reservaData);
     } else {
-        // Si no hay un id, te genera
+        // Si no hay un id, te genera una nueva reserva mediante metodo POST
+        result = await fetchData(`${BASEURL}/api/reserva/`, 'POST', reservaData);
+    }
+
+    if (result) {
+        const formReservas = document.querySelector('#form-reservas');
+        formReservas.reset();
+        Swal.fire({
+            title: 'Éxito!',
+            text: result.message,
+            icon: 'success',
+            confirmButtonText: 'Cerrar'
+        });
+        showReservas();
+    }
+}
+
+async function showReservas() {
+    let reservas = await fetchData(BASEURL + '/api/reserva/', 'GET');
+    if (!reservas) {
+        console.error('No se pudieron obtener las reservas.');
+        return;
+    }
+    const tableReservas = document.querySelector('#list-table-reservas tbody');
+    tableReservas.innerHTML = '';
+    reservas.forEach((reserva) => {
+        let tr = `<tr>
+                      <td>${reserva.nombre}</td>
+                      <td>${reserva.telefono}</td>
+                      <td>${reserva.email}</td>
+                      <td>${reserva.comensales}</td>
+                      <td>${reserva.menu}</td>
+                      <td>${reserva.fecha}</td>
+                      <td>${reserva.horario}</td>
+                      <td>
+                          <button class="btn-save-reserva" onclick='updateReserva(${reserva.id_reserva})'><i class="fa fa-pencil"></i></button>
+                          <button class="btn-save-reserva" onclick='deleteReserva(${reserva.id_reserva})'><i class="fa fa-trash"></i></button>
+                      </td>
+                  </tr>`;
+        tableReservas.insertAdjacentHTML("beforeend", tr);
+    });
+}
+
+/**
+ * Función que permite eliminar una reserva del servidor.
+ * @param {number} id Id de la reserva que se va a eliminar
+ */
+function deleteReserva(id) {
+    Swal.fire({
+        title: "¿Está seguro de eliminar la reserva?",
+        showCancelButton: true,
+        confirmButtonText: "Eliminar",
+    }).then(async (result) => {
+        if (result.isConfirmed) {
+            let response = await fetchData(`${BASEURL}/api/reserva/${id}`, 'DELETE');
+            if (response) {
+                showReservas();
+                Swal.fire(response.message, "", "success");
+            }
+        }
+    });
+}
+
+/**
+ * Función que permite cargar el formulario con los datos de la reserva 
+ * para su edición.
+ * @param {number} id_reserva Id de la reserva que se quiere editar
+ */
+async function updateReserva(id_reserva) {
+    // Buscamos en el servidor la reserva de acuerdo al id
+    let response = await fetchData(`${BASEURL}/api/reserva/${id_reserva}`, 'GET');
+    if (response) {
+        document.querySelector('#id-reserva').value = response.id_reserva;
+        document.querySelector('#nombre').value = response.nombre;
+        document.querySelector('#telefono').value = response.telefono;
+        document.querySelector('#email').value = response.email;
+        document.querySelector('#comensales').value = response.comensales;
+        document.querySelector('#menu').value = response.menu;
+        document.querySelector('#fecha').value = response.fecha;
+        document.querySelector('#horario').value = response.horario;
+    }
+}
+
+// Escuchar el evento 'DOMContentLoaded' que se dispara cuando el 
+// contenido del DOM ha sido completamente cargado y parseado.
+document.addEventListener('DOMContentLoaded', function () {
+    const btnSaveReserva = document.querySelector('#btn-save-reserva');
+    // Asociar una función al evento click del botón
+    btnSaveReserva.addEventListener('click', saveReserva);
+    showReservas();
+});
