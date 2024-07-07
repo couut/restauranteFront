@@ -25,7 +25,6 @@ async function fetchData(url, method, data = null) {
     } catch (error) {
       console.error('Fetch error:', error);
       alert('An error occurred while fetching data. Please try again.');
-      return null;
     }
 }
 
@@ -80,6 +79,7 @@ async function saveReserva(){
   })
   showReservas();
 }
+
 async function showReservas(){
   let reservas =  await fetchData(BASEURL+'/api/reserva/', 'GET');
   if (!reservas) {
@@ -98,30 +98,39 @@ async function showReservas(){
                   <td>${reserva.fecha}</td>
                   <td>${reserva.horario}</td>
                   <td>
-                      <button class="btn-reserva" onclick='updatereserva(${reserva.id_Reserva})'><i class="fa fa-pencil" ></button></i>
-                      <button class="btn-reserva" onclick='deletereserva(${reserva.id_Reserva})'><i class="fa fa-trash" ></button></i>
+                      <button class="btn-save-reserva" onclick='updatereserva(${reserva.id_Reserva})'><i class="fa fa-pencil" ></button></i>
+                      <button class="btn-save-reserva" onclick='deletereserva(${reserva.id_Reserva})'><i class="fa fa-trash" ></button></i>
                   </td>
                 </tr>`;
     tableReservas.insertAdjacentHTML("beforeend",tr);
   });
 }
 
-async function deletereserva(idReserva){
-  let result = await fetchData(`${BASEURL}/api/reserva/${idReserva}`, 'DELETE');
+
+
+function deletereserva(id){
   Swal.fire({
-    title: 'Exito!',
-    text: result.message,
-    icon: 'success',
-    confirmButtonText: 'Cerrar'
-  })
-  showReservas();
+      title: "Esta seguro de eliminar la reserva?",
+      showCancelButton: true,
+      confirmButtonText: "Eliminar",
+  }).then(async (result) => {
+      if (result.isConfirmed) {
+        let response = await fetchData(`${BASEURL}/api/reserva/${id}`, 'DELETE');
+        showReservas();
+        Swal.fire(response.message, "", "success");
+      }
+  });
+  
 }
 
-// @param {number} id Id de la pelicula que se quiere editar
-
-async function updatereserva(idreserva){
- //Buscamos en el servidor la pelicula de acuerdo al id
- let response = await fetchData(`${BASEURL}/api/reserva/${idreserva}`, 'GET');
+/**
+ * Function que permite cargar el formulario con los datos de la pelicula 
+ * para su edición
+ * @param {number} id Id de la pelicula que se quiere editar
+ */
+async function updatereserva(id_reserva){
+ //Buscamos en el servidor la reserva de acuerdo al id
+ let response = await fetchData(`${BASEURL}/api/reserva/${id_reserva}`, 'GET');
  const idReserva = document.querySelector('#id-reserva').value;
  const nombre = document.querySelector('#nombre').value;
  const telefono = document.querySelector('#telefono').value;
@@ -131,7 +140,7 @@ async function updatereserva(idreserva){
  const fecha = document.querySelector('#fecha').value;
  const horario = document.querySelector('#horario').value;
  
- idReserva.value = response.id_Reserva;
+ idReserva.value = response.id_reserva;
  nombre.value = response.nombre;
  telefono.value = response.telefono;
  email.value = response.email;
