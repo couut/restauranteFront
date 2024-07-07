@@ -3,11 +3,11 @@ from flask import request, jsonify
 
 def crear_reserva():
     data = request.get_json()
-    # for item in data:
-    #     fecha=item['fecha']
-    #     horario=item['horario']
-    # if not Reserva.verificar_horario(fecha, horario):
-    #     return jsonify({'mensaje': 'El horario no está disponible'}), 400
+    for item in data:
+        fecha=item['fecha']
+        horario=item['horario']
+    if not Reserva.verificar_horario(fecha, horario):
+        return jsonify({'mensaje': 'El horario no está disponible'}), 400
     if isinstance(data, list):  # Verifica si los datos son una lista
         for dato in data:
             # Asegúrate de que cada elemento en la lista es un diccionario
@@ -41,15 +41,19 @@ def update_reserva(id_reserva):
     reserva = Reserva.get_by_id(id_reserva)
     if not reserva:
         return jsonify({'mensaje': 'No existe reserva asociada'}), 404
-    # if not Reserva.verificar_horario(data['fecha'], data['horario']):
-    #     return jsonify({'mensaje': 'El horario no está disponible'}), 400
-    reserva.nombre = data['nombre']
-    reserva.telefono = data['telefono']
-    reserva.email = data['email']
-    reserva.comensales = data['comensales']
-    reserva.menu = data['menu']
-    reserva.fecha = data['fecha']
-    reserva.horario = data['horario']
+    for item in data:
+        fecha = item ['fecha']
+        horario = item ['horario']
+    if not Reserva.verificar_horario(fecha, horario):
+        return jsonify({'mensaje': 'El horario no está disponible'}), 400
+    for dato in data:
+        reserva.nombre = dato['nombre']
+        reserva.telefono = dato['telefono']
+        reserva.email = dato['email']
+        reserva.comensales = dato['comensales']
+        reserva.menu = dato['menu']
+        reserva.fecha = dato['fecha']
+        reserva.horario = dato['horario']
     reserva.update()
     return jsonify({'mensaje': 'Reserva actualizada exitosamente'})
 

@@ -70,8 +70,8 @@ async function saveReserva(){
     result = await fetchData(`${BASEURL}/api/reserva/`, 'POST', reservaData);
   }
 
-  const formMovie = document.querySelector('#form-reservas');
-  formMovie.reset();
+  const formReservas = document.querySelector('#form-reservas');
+  formReservas.reset();
   Swal.fire({
     title: 'Exito!',
     text: result.message,
@@ -98,8 +98,8 @@ async function showReservas(){
                   <td>${reserva.fecha}</td>
                   <td>${reserva.horario}</td>
                   <td>
-                      <button class="btn-reserva" onclick='updateMovie(${reserva.id_Reserva})'><i class="fa fa-pencil" ></button></i>
-                      <button class="btn-reserva" onclick='deleteMovie(${reserva.id_Reserva})'><i class="fa fa-trash" ></button></i>
+                      <button class="btn-reserva" onclick='updatereserva(${reserva.id_Reserva})'><i class="fa fa-pencil" ></button></i>
+                      <button class="btn-reserva" onclick='deletereserva(${reserva.id_Reserva})'><i class="fa fa-trash" ></button></i>
                   </td>
                 </tr>`;
     tableReservas.insertAdjacentHTML("beforeend",tr);

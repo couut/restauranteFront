@@ -70,5 +70,4 @@ class Reserva:
         cursor = db.cursor()
         cursor.execute('SELECT * FROM reservas WHERE fecha = %s AND horario = %s', (fecha, horario))
         reserva = cursor.fetchone()
-        cursor.close()
         return reserva is None
