@@ -116,7 +116,6 @@ async function showReservas(){
  * de acuedo al indice del mismo
  * @param {number} id posición del array que se va a eliminar
  */
-
 function deletereserva(id){
   Swal.fire({
       title: "Esta seguro de eliminar la reserva?",
@@ -137,9 +136,9 @@ function deletereserva(id){
  * para su edición
  * @param {number} id Id de la pelicula que se quiere editar
  */
-async function updatereserva(id_reserva){
+async function updatereserva(id){
  //Buscamos en el servidor la reserva de acuerdo al id
- let response = await fetchData(`${BASEURL}/api/reserva/${id_reserva}`, 'GET');
+ let response = await fetchData(`${BASEURL}/api/reserva/${id}`, 'GET');
  const idReserva = document.querySelector('#id-reserva').value;
  const nombre = document.querySelector('#nombre').value;
  const telefono = document.querySelector('#telefono').value;
