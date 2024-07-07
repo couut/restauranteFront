@@ -16,7 +16,7 @@ class Reserva:
         cursor=db.cursor()
         cursor.execute('SELECT * FROM reservas') #el nombre de la tabla es reservas
         filas = cursor.fetchall()
-        reservas =[Reserva(id_reserva= fila[0], fecha=fila[1], horario=fila[2], nombre=fila[3], comensales=fila[4], telefono=fila[5], email=fila[6], menu=fila[7]) for fila in filas]
+        reservas =[Reserva(id_reserva= fila[0], fecha=fila[6], horario=fila[7], nombre=fila[1], comensales=fila[4], telefono=fila[2], email=fila[3], menu=fila[5]) for fila in filas]
         cursor.close()
         return reservas
     @staticmethod
@@ -25,7 +25,7 @@ class Reserva:
         cursor=db.cursor()
         cursor.execute('SELECT * FROM reservas WHERE id_reserva = %s', (id_reserva,))
         fila = cursor.fetchone()
-        reserva = Reserva(id_reserva=fila[0], fecha=fila[1], horario=fila[2], nombre=fila[3], comensales=fila[4], telefono=fila[5], email=fila[6], menu=fila[7])
+        reserva = Reserva(id_reserva= fila[0], fecha=fila[6], horario=fila[7], nombre=fila[1], comensales=fila[4], telefono=fila[2], email=fila[3], menu=fila[5])
         cursor.close()
         return reserva
     
