@@ -74,15 +74,17 @@ async function saveReserva(){
     result = await fetchData(`${BASEURL}/api/reserva/`, 'POST', reservaData);
   }
 
-  const formReservas = document.querySelector('#form-reservas');
-  formReservas.reset();
-  Swal.fire({
-    title: 'Exito!',
-    text: result.message,
-    icon: 'success',
-    confirmButtonText: 'Cerrar'
-  })
-  showReservas();
+    if (result) {
+        const formReservas = document.querySelector('#form-reservas');
+        formReservas.reset();
+        Swal.fire({
+            title: 'Éxito!',
+            text: result.message,
+            icon: 'success',
+            confirmButtonText: 'Cerrar'
+        });
+        showReservas();
+    }
 }
 
 async function showReservas(){
