@@ -28,6 +28,11 @@ async function fetchData(url, method, data = null) {
     }
 }
 
+/**
+ * Función para comunicarse con el servidor para poder Crear o Actualizar
+ * un registro de pelicula
+ * @returns 
+ */
 
 async function saveReserva(){
   const idReserva = document.querySelector('#id-reserva').value;
@@ -106,7 +111,11 @@ async function showReservas(){
   });
 }
 
-
+/**
+ * Function que permite eliminar una pelicula del array del localstorage
+ * de acuedo al indice del mismo
+ * @param {number} id posición del array que se va a eliminar
+ */
 
 function deletereserva(id){
   Swal.fire({
