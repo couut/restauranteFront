@@ -31,14 +31,14 @@ async function fetchData(url, method, data = null) {
 
 
 async function saveReserva(){
-    const idReserva = document.querySelector('#id-reserva').value;
-    const nombre = document.querySelector('#nombre').value;
-    const telefono = document.querySelector('#telefono').value;
-    const email = document.querySelector('#email').value;
-    const comensales = document.querySelector('#comensales').value;
-    const menu = document.querySelector('#menu').value;
-    const fecha = document.querySelector('#fecha').value;
-    const horario = document.querySelector('#horario').value;
+  const idReserva = document.querySelector('#id-reserva').value;
+  const nombre = document.querySelector('#nombre').value;
+  const telefono = document.querySelector('#telefono').value;
+  const email = document.querySelector('#email').value;
+  const comensales = document.querySelector('#comensales').value;
+  const menu = document.querySelector('#menu').value;
+  const fecha = document.querySelector('#fecha').value;
+  const horario = document.querySelector('#horario').value;
 
 
   if (!nombre || !telefono || !email || !comensales || !menu || !fecha || !horario) {
@@ -53,13 +53,13 @@ async function saveReserva(){
 
   // Crea un objeto con los datos de la reserva
   const reservaData = {
-    nombre: nombre,
-    telefono: telefono,
-    email: email,
-    comensales: comensales,
-    menu: menu,
-    fecha: fecha,
-    horario: horario,
+     nombre: nombre,
+     telefono: telefono,
+     email: email,
+     comensales: comensales,
+     menu: menu,
+     fecha: fecha,
+     horario: horario,
   };
   let result = null;
   // Si hay un id, hace una petición PUT para actualizar la reserva de la base de datos
@@ -88,7 +88,7 @@ async function showReservas(){
   }
   const tableReservas = document.querySelector('#list-table-reservas tbody');
   tableReservas.innerHTML='';
-  reservas.forEach((reserva,index) => {
+  reservas.forEach((reserva) => {
     let tr = `<tr>
                   <td>${reserva.nombre}</td>
                   <td>${reserva.telefono}</td>
