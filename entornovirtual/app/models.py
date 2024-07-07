@@ -49,7 +49,7 @@ class Reserva:
     def delete(self):
         db = get_db()
         cursor = db.cursor()
-        cursor.execute('DELETE FROM reservas WHERE id_reserva = %s', (self.id_reserva))
+        cursor.execute("DELETE FROM reservas WHERE id_reserva = %s", (self.id_reserva,))
         db.commit()
         cursor.close()
 

@@ -136,9 +136,9 @@ async function updatereserva(idreserva){
  telefono.value = response.telefono;
  email.value = response.email;
  comensales.value = response.comensales;
-  menu.value = response.menu;
-  fecha.value = response.fecha;
-  horario.value = response.horario;
+ menu.value = response.menu;
+ fecha.value = response.fecha;
+ horario.value = response.horario;
 }
  
 // Escuchar el evento 'DOMContentLoaded' que se dispara cuando el 
