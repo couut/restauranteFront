@@ -23,7 +23,11 @@ async function fetchData(url, method, data = null) {
         return await response.json();  // Devuelve la respuesta en formato JSON
     } catch (error) {
         console.error('Fetch error:', error);
-        alert('An error occurred while fetching data. Please try again.');
+        Swal.fire({
+            title: 'Error!',
+            text: error.message ||'Hubo un error al intentar guardar la reserva.',
+            icon: 'error',
+        });
         return null; // Ensure to return null in case of an error
     }
 }
@@ -70,6 +74,16 @@ async function saveReserva() {
     } else {
         // Si no hay un id, te genera una nueva reserva mediante metodo POST
         result = await fetchData(`${BASEURL}/api/reserva/`, 'POST', reservaData);
+        if (result ==null){
+            Swal.fire({
+                title: 'Error!',
+                text: 'La fecha y hora seleccionada ya se encuentra ocupada.',
+                icon: 'error',
+                confirmButtonText: 'Cerrar'
+            });
+            return;
+        }
+
     }
 
     if (result) {
