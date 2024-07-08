@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Reservas</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+    <script src="https://kit.fontawesome.com/716f5089a4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+    <div class="wrap-header-fondo-reservas_2">
+        <header class="main-header">
+            <div class="header-wrap">
+
+                <input type="checkbox" id="nav_check" hidden>
+
+                <!--Navbar-->
+                <div class="wrap-nav-header">
+
+                    <nav class="nav-header">
+                        <!--Nav Menu-->
+
+                        <ul class="main-menu" id="main-menu-1">
+                            <li class="menu-item"><a href="../index.html">Inicio</a></li>
+                            <li class="menu-item"><a href="../varios/aboutUs.html">Nosotros</a></li>
+                            <li class="menu-item"><a href="../varios/carta.html">Carta</a></li>
+                            <li class="menu-item"><a href="../forms/contactUs.html">Reservas</a></li>
+                            <li class="menu-item"><a id="nav-btn-contact" href="./Registro.html">Registrate</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <!--Redes-->
+                <div class="iconos-header" id="iconos-header-1">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+            </div>
+
+        </header>
+
+        <h1 style="color:#FFF; text-align: center ; margin-top: 3rem;margin-bottom: 3rem">Lista de Reservas</h1>
+
+        <main>
+            <section class="section_reservas">
+                <div class="wrap-restaurant-reservas-page_2">
+                    <!--Formulario-->
+                    <form id="form-reserva">
+                        <div class="formulario_grupo">
+                            <label for="nombre">Nombre y Apellido</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Nombre y Apellido">
+                        </div>
+
+                        <div class="formulario_grupo">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" id="telefono" name="telefono" required placeholder="Telefono">
+                        </div>
+
+                        <div class="formulario_grupo">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="email">
+                        </div>
+
+                        <div class="formulario_grupo">
+                            <label for="comensales">Comensales</label>
+                            <input type="number" id="comensales" name="comensales" required
+                                placeholder="Cantidad de personas">
+                        </div>
+
+                        <div class="formulario_grupo">
+                            <label for="menu">Tipo de Menú</label>
+                            <input type="text" id="menu" name="menu" required
+                                placeholder="Vegetariano/Vegano/Celíaco/Sin restricciones">
+                        </div>
+
+                        <div class="formulario_grupo">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="formulario_grupo">
+                            <label for="horario">Horario de Reserva</label>
+                            <select name="horario" id="horario">
+                                <option >12:00 pm</option>
+                                <option >13:00 pm</option>
+                                <option >14:00 pm</option>
+                                <option >15:00 pm</option>
+                                <option >20:00 pm</option>
+                                <option >21:00 pm</option>
+                                <option >22:00 pm</option>
+                                <option >23:00 pm</option>
+                            </select>
+                        </div>
+
+                        <input type="hidden" id="id-reserva" name="id-reserva">
+
+                        <div class="formulario_grupo">
+                            <button type="button" id="btn-save-reserva">Guardar Reserva</button>
+                        </div>
+
+                    </form>
+            </section>
+            <section class="section_lista">
+                <h1 style="color:#FFF; text-align: center ; margin-top: 5rem; margin-bottom: 3rem">Lista de Reservas
+                </h1>
+                <table id="list-table-reservas">
+                    <thead>
+                        <tr>
+                            <th>Nombre y Apellido</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                            <th>Comensales</th>
+                            <th>Tipo de Menú</th>
+                            <th>Fecha</th>
+                            <th>Horario de Reserva</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Reservas serán insertadas aquí -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+
+
+
+    <script src="../forms/CRUD-reservas.js"></script>
+
+
+</body>
+
+</html>

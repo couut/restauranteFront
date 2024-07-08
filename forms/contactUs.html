@@ -10,7 +10,8 @@
     <script src="https://kit.fontawesome.com/716f5089a4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
 </head>
 
 <body>
@@ -70,39 +71,34 @@ Sabemos lo importante que es para ti disfrutar de una velada sin preocupaciones.
 Esperamos darte la bienvenida muy pronto y que disfrutes de una experiencia única. ¡Hacé tu reserva ahora y vive momentos inolvidables con nosotros!</p>
 
                     <!--Formulario-->
-                    <form action="" class="formulario" id="formulario">
+                    <form class="formulario" id="formularioo">
                         <div class="formulario_grupo" id="grupo_nombre">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="nombre" placeholder="Nombre">
+                            <label for="nombre2">Nombre y apellido</label>
+                            <input type="text" name="nombre2" id="nombre2" placeholder="Nombre y apellido">
                         </div>
-                        <div class="formulario_grupo" id="grupo_apellido">
-                            <label for="last-name">Apellido</label>
-                            <input type="text" id="apellido" placeholder="Apellido">
-                        </div>
-
                         <div class="formulario_grupo" id="grupo_tel">
-                            <label for="phone">Teléfono</label>
-                            <input type="text" id="telefono" placeholder="Telefono">
+                            <label for="telefono2">Teléfono</label>
+                            <input type="text" name="telefono2" id="telefono2" placeholder="Telefono">
                         </div>
 
                         <div class="formulario_grupo" id="grupo_mail">
-                            <label for="mail">Mail</label>
-                            <input type="text" id="mail" placeholder="Mail">
+                            <label for="email2">Mail</label>
+                            <input type="text" name="email2" id="email2" placeholder="Mail">
                         </div>
 
                         <div class="formulario_grupo" id="grupo_personas">
-                            <label for="personas">Comensales</label>
-                            <input type="text" id="comensales" placeholder="Cantidad de personas">
+                            <label for="comensales2">Comensales</label>
+                            <input type="text" name="comensales2" id="comensales2" placeholder="Cantidad de personas">
                         </div>
 
                         <div class="formulario_grupo" id="grupo_fecha">
-                            <label for="date">Fecha</label>
-                            <input type="date" id="fecha">
+                            <label for="fecha2">Fecha</label>
+                            <input type="date" name="fecha2" id="fecha2">
                         </div>
 
                         <div class="formulario_grupo" id="grupo_menu">
-                            <label for="menu">Tipo de Menú</label>
-                            <select name="menu" id="menu">
+                            <label for="menu2">Tipo de Menú</label>
+                            <select name="menu2" id="menu2">
                                 <option value="Sin restricciones">Sin restricciones</option>
                                 <option value="celiaco">Sin TACC</option>
                                 <option value="vegetariano">Vegetariano</option>
@@ -112,22 +108,19 @@ Esperamos darte la bienvenida muy pronto y que disfrutes de una experiencia úni
                         </div>
 
                         <div class="formulario_grupo" id="grupo_hora">
-                            <label for="time">Horario de reserva</label>
-                            <select name="horario" id="horario">
-                                <option value="horario">12:00 pm</option>
-                                <option value="horario">13:00 pm</option>
-                                <option value="horario">14:00 pm</option>
-                                <option value="horario">15:00 pm</option>
-                                <option value="horario">20:00 pm</option>
-                                <option value="horario">21:00 pm</option>
-                                <option value="horario">22:00 pm</option>
-                                <option value="horario">23:00 pm</option>
+                            <label for="horario2">Horario de reserva</label>
+                            <select name="horario2" id="horario2">
+                                <option >12:00 pm</option>
+                                <option >13:00 pm</option>
+                                <option >14:00 pm</option>
+                                <option >15:00 pm</option>
+                                <option >20:00 pm</option>
+                                <option >21:00 pm</option>
+                                <option >22:00 pm</option>
+                                <option >23:00 pm</option>
                             </select>
                         </div>
-                        <div class="formulario_grupo" id="grupo_comment">
-                            <label for="comment">Comentarios</label>
-                            <textarea name="" id="" cols="20" rows="5" placeholder="Comentarios"></textarea>
-                        </div>
+                        <input type="hidden" id="idreserva2">
                         <div class="formulario_grupo" id="grupo_button" style="align-items: center;">
                             <button type="submit" class="form_enviar" id="enviar">Enviar</button>
                         </div>
@@ -141,10 +134,10 @@ Esperamos darte la bienvenida muy pronto y que disfrutes de una experiencia úni
 
         </main>
 
-
+  
     </div>
-
-
+  <script src="../forms/reservas_ContactUs.js"></script>
+      
 
     <!--Footer-->
     <footer class="footer">
@@ -225,6 +218,8 @@ Esperamos darte la bienvenida muy pronto y que disfrutes de una experiencia úni
         </div>
     </footer>
 
+
+  
     <!--<script src="script.js"></script>-->
 </body>
 
