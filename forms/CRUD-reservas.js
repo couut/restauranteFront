@@ -31,7 +31,7 @@ async function fetchData(url, method, data = null) {
 /**
  * Función para comunicarse con el servidor para poder Crear o Actualizar
  * un registro de reserva.
- * @returns 
+ *  
  */
 async function saveReserva() {
     const idReserva = document.querySelector('#id-reserva').value;
