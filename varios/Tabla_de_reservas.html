@@ -58,7 +58,7 @@
                     <!--Formulario-->
                     <form id="form-reserva">
                         <div class="formulario_grupo">
-                            <label for="nombre">Nombre y Apellido</label>
+                            <label for="nombre">Nombre</label>
                             <input type="text" id="nombre" name="nombre" required placeholder="Nombre y Apellido">
                         </div>
 
@@ -80,8 +80,13 @@
 
                         <div class="formulario_grupo">
                             <label for="menu">Tipo de Menú</label>
-                            <input type="text" id="menu" name="menu" required
-                                placeholder="Vegetariano/Vegano/Celíaco/Sin restricciones">
+                            <select name="menu" id="menu">
+                                <option value="Sin restricciones">Sin restricciones</option>
+                                <option value="celiaco">Sin TACC</option>
+                                <option value="vegetariano">Vegetariano</option>
+                                <option value="vegano">Vegano</option>
+                                <option value="varios">Varios -</option>
+                            </select>
                         </div>
 
                         <div class="formulario_grupo">
@@ -116,7 +121,7 @@
                 <table id="list-table-reservas">
                     <thead>
                         <tr>
-                            <th>Nombre y Apellido</th>
+                            <th>Nombre</th>
                             <th>Teléfono</th>
                             <th>Email</th>
                             <th>Comensales</th>
