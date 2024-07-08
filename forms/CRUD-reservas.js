@@ -45,23 +45,23 @@ async function saveReserva() {
 
     if (!nombre || !telefono || !email || !comensales || !menu || !fecha || !horario) {
         Swal.fire({
-            title: 'Error!',
-            text: 'Por favor completa todos los campos.',
-            icon: 'error',
-            confirmButtonText: 'Cerrar'
+                title: 'Error!',
+                text: 'Por favor completa todos los campos.',
+                icon: 'error',
+                confirmButtonText: 'Cerrar'
         });
         return;
     }
 
     // Crea un objeto con los datos de la reserva
     const reservaData = {
-        nombre: nombre,
-        telefono: telefono,
-        email: email,
-        comensales: comensales,
-        menu: menu,
-        fecha: fecha,
-        horario: horario,
+            nombre: nombre,
+            telefono: telefono,
+            email: email,
+            comensales: comensales,
+            menu: menu,
+            fecha: fecha,
+            horario: horario,
     };
 
     let result = null;
@@ -74,7 +74,7 @@ async function saveReserva() {
     }
 
     if (result) {
-        const formReservas = document.querySelector('#form-reservas');
+        const formReservas = document.querySelector('#form-reserva');
         formReservas.reset();
         Swal.fire({
             title: 'Éxito!',
@@ -104,8 +104,8 @@ async function showReservas() {
                       <td>${reserva.fecha}</td>
                       <td>${reserva.horario}</td>
                       <td>
-                          <button class="btn-save-reserva" onclick='updateReserva(${reserva.id_reserva})'><i class="fa fa-pencil"></i></button>
-                          <button class="btn-save-reserva" onclick='deleteReserva(${reserva.id_reserva})'><i class="fa fa-trash"></i></button>
+                          <button class="btn-save-reservaa" onclick='updateReserva(${reserva.id_reserva})'><i class="fa fa-pencil"></i></button>
+                          <button class="btn-save-reservaa" onclick='deleteReserva(${reserva.id_reserva})'><i class="fa fa-trash"></i></button>
                       </td>
                   </tr>`;
         tableReservas.insertAdjacentHTML("beforeend", tr);
@@ -135,11 +135,11 @@ function deleteReserva(id) {
 /**
  * Función que permite cargar el formulario con los datos de la reserva 
  * para su edición.
- * @param {number} id_reserva Id de la reserva que se quiere editar
+ * @param {number} id Id de la reserva que se quiere editar
  */
-async function updateReserva(id_reserva) {
+async function updateReserva(id) {
     // Buscamos en el servidor la reserva de acuerdo al id
-    let response = await fetchData(`${BASEURL}/api/reserva/${id_reserva}`, 'GET');
+    let response = await fetchData(`${BASEURL}/api/reserva/${id}`, 'GET');
     if (response) {
         document.querySelector('#id-reserva').value = response.id_reserva;
         document.querySelector('#nombre').value = response.nombre;
