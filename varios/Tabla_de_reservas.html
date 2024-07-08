@@ -50,7 +50,7 @@
 
         </header>
 
-        <h1 style="color:#FFF; text-align: center ; margin-top: 3rem;margin-bottom: 3rem">Reservas</h1>
+        <h1 style="color:#FFF; text-align: center ; margin-top: 3rem;margin-bottom: 3rem">Lista de Reservas</h1>
 
         <main>
             <section class="section_reservas">
@@ -90,7 +90,16 @@
                         </div>
                         <div class="formulario_grupo">
                             <label for="horario">Horario de Reserva</label>
-                            <input type="text" id="horario" name="horario" required placeholder="Hora">
+                            <select name="horario" id="horario">
+                                <option >12:00 pm</option>
+                                <option >13:00 pm</option>
+                                <option >14:00 pm</option>
+                                <option >15:00 pm</option>
+                                <option >20:00 pm</option>
+                                <option >21:00 pm</option>
+                                <option >22:00 pm</option>
+                                <option >23:00 pm</option>
+                            </select>
                         </div>
 
                         <input type="hidden" id="id-reserva" name="id-reserva">
