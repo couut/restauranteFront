@@ -895,7 +895,7 @@ li.footer-menu-item a:hover {
   font-family: "Ubuntu Sans", sans-serif;
 }
 
-#menu2,
+#menu2, #menu,#horario,
 #horario2 {
   padding: 0.5rem 2rem;
   text-align: left;
