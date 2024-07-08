@@ -378,7 +378,9 @@ img {
   aspect-ratio: 1/1;
 }
 #logo{
-  width:fit-content;
+  padding: bottom 0; 
+  width:20vw;
+  height: auto;
 }
 
 section {
