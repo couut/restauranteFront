@@ -377,6 +377,9 @@ img {
   width: 100%;
   aspect-ratio: 1/1;
 }
+#logo{
+  width:fit-content;
+}
 
 section {
   max-width: 100%;
